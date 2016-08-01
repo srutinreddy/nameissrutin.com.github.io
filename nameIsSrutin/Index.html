@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>NameIsSrutin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <link href="Style/StyleSheet1.css" rel="stylesheet" />
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/App.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+    <div class="container-fluid" style="background-image: url('Images/1.jpg');background-repeat: no-repeat;
+  background-size:cover;background-size: 100%; background-attachment: fixed;
+height:620px; color: white;">
+        <center>
+            <h1>This is my zone</h1>
+            <font size=20>Srutin Palla</font>
+        </center>
+    </div>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="610">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">HOME</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#aboutme">About Me</a></li>
+                        <li><a href="#mywork">My Work</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#application">Application</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="aboutme" class="container-fluid" style="background-image: url('Images/2.jpg');background-repeat: no-repeat;
+            background-attachment: fixed; background-size:cover;">
+        <h1>About Me</h1>
+        <p>
+            A graduate with a <b>Master’s</b> degree in Computer Science
+        </p>
+        <p>
+            Experience in Software Development, Application Maintenance on web application with
+            HTML, CSS, JavaScript, jQuery, AngularJS and JSON.
+        </p>
+        <p>
+            Experience in developing Responsive web pages quickly and effectively
+            using jQuery, HTML5, CSS3, Bootstrap
+        </p>
+    </div>
+    <div id="mywork" class="container-fluid" style="background-image: url('Images/4.jpg');background-repeat: no-repeat;
+           background-attachment: fixed; background-size:cover;">
+        <h1>My Work</h1>
+        <p>This is my work</p>
+    </div>
+    <div id="skills" class="container-fluid" style="background-image: url('Images/5.gif');background-repeat: no-repeat;
+      background-attachment: fixed; background-size:cover;">
+        <h1>Skills</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/html5.png" alt="HTML5" height="135px" width="135px">
+                        <h4 class="text-center">HTML5</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/css3-logo.png" alt="CSS3" height="135px" width="120px">
+                        <h4 class="text-center">CSS3</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/js-logo.png" alt="JS" height="135px" width="135px">
+                        <h4 class="text-center">JavaScript</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/angularjs-logo.png" alt="Angular JS" height="133px" width="130px">
+                        <h4 class="text-center">Angular JS</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/bootstrap-logo.png" alt="Bootstrap" height="133px" width="130px">
+                        <h4 class="text-center">Bootstrap</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/MySQL-logo.png" alt="My SQL" height="133px" width="130px">
+                        <h4 class="text-center">My SQL</h4>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <div class="item">
+                        <img src="Images/Java_logo.png" alt="JAVA" height="133px" width="130px">
+                        <span class="text-center">JAVA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-app="myApp">
+        <div id="contact" class="container-fluid">
+            <h1>Contact Me</h1>
+            <p>Srutin Reddy Palla </p>
+            <p>email: srutinreddy@yahoo.com</p>
+
+
+            TOO LAZY?? send an email from here...
+            <form name="myForm" ng-controller="validateCtrl">
+
+
+                email&nbsp;&nbsp;&nbsp;:
+                <input type="email" placeholder="your email" name="email" ng-model="email" required>
+                <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                    <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                </span>
+                <br />
+                Subject&nbsp;:<input name="myName" ng-model="myName" placeholder="Subject" required >
+                <span ng-show="myForm.myName.$touched && myForm.myName.$invalid" style="color:red">Subject is required.</span><br />
+                Content:<textarea type="text" placeholder="Enter content" name="content" ng-model="content" required
+                         style="margin: 0px; width: 400px; height:200px; max-height:300px;max-width:500px"></textarea>
+                <span ng-show="myForm.content.$touched && myForm.content.$invalid" style="color:red">
+                Content cannot be blank.</span><br />
+                <input type="button" value="Send" />
+               
+            </form>
+        </div>
+        <div id="application" class="container-fluid">
+            <h1>Application</h1>
+            <p>More Coming Soon</p>
+            <a href="#page1">page1</a>
+            <a href="#page2">page2</a>
+            <a href="#page3">page3</a>
+            <div ng-view style="height:500px; width:500px"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+

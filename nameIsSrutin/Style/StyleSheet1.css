@@ -1,0 +1,21 @@
+﻿body {
+      position: relative;
+  }
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+  #aboutme {padding-top:50px;height:700px;color: #fff; background-color: #1E88E5;}
+  #mywork {padding-top:50px;height:700px;color: #fff; background-color: #673ab7;}
+  #skills {padding-top:50px;height:700px;color: black;background-color: #ff9800;}
+  #contact {padding-top:50px;height:700px;color: black; background-color: transparent;}
+  #application {padding-top:50px;color: black; background-color: yellow;}
